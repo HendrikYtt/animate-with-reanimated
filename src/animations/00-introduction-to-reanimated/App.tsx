@@ -5,12 +5,12 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
   withRepeat,
-
+    SharedValue
 } from 'react-native-reanimated';
 
 const SIZE = 100.0;
 
-const handleRotation = (progress: Animated.SharedValue<number>) => {
+const handleRotation = (progress: SharedValue<number>) => {
   'worklet';
 
   return `${progress.value * 2 * Math.PI}rad`;
