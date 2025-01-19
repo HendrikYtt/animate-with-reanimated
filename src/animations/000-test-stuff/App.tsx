@@ -15,7 +15,7 @@ import {Gesture, GestureDetector, GestureHandlerRootView} from "react-native-ges
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
-const duration = 2000;
+// const duration = 2000;
 const boxWidth = 120;
 const OFFSET = 20;
 const TIME = 150;
@@ -125,17 +125,17 @@ export default function App() {
             pressed.value = false;
         });
 
-    const pan = Gesture.Pan()
-        .onBegin(() => {
-            pressed.value = true;
-        })
-        .onChange((event) => {
-            gestureOffset.value = event.translationX;
-        })
-        .onFinalize(() => {
-            gestureOffset.value = withSpring(0);
-            pressed.value = false;
-        });
+    // const pan = Gesture.Pan()
+    //     .onBegin(() => {
+    //         pressed.value = true;
+    //     })
+    //     .onChange((event) => {
+    //         gestureOffset.value = event.translationX;
+    //     })
+    //     .onFinalize(() => {
+    //         gestureOffset.value = withSpring(0);
+    //         pressed.value = false;
+    //     });
 
     const pan2 = Gesture.Pan()
         .onChange((event) => {
